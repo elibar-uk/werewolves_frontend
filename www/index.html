@@ -26,21 +26,35 @@
     <script src="lib/angular-sanitize/angular-sanitize.js"></script>
     <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-    <base href="/">
+
   </head>
   <body ng-app="starter">
 
-    <ion-pane>
-    <ion-header-bar class="bar-stable">
-         <h1 class="title">Werewolves</h1>
-         <a id='sign-up-btn' class='button button-positive button-large' ng-href="templates/user/sign-up.html">Sign up</a>
-         <a class='button button-positive button-large' ng-href="templates/user/login.html">Sign in</a>
-         <a class='button button-assertive button-large' ng-click='signOut()'>Sign out</a>
+     <ion-pane>
+       <ion-header-bar class="bar-stable">
+         <h1 class="title">Ionic Blank Starter</h1>
        </ion-header-bar>
+       <ion-content>
 
-    <ui-view></ui-view>
+         <form ng-submit="submitRegistration(registrationForm)" role="form" ng-init="registrationForm = {}">
+           <div class="form-group">
+             <label>email</label>
+             <input type="email" name="email" ng-model="registrationForm.email" required="required" class="form-control"/>
+           </div>
 
+           <div class="form-group">
+             <label>password</label>
+             <input type="password" name="password" ng-model="registrationForm.password" required="required" class="form-control"/>
+           </div>
 
+           <div class="form-group">
+             <label>password confirmation</label>
+             <input type="password" name="password_confirmation" ng-model="registrationForm.password_confirmation" required="required" class="form-control"/>
+           </div>
+
+           <button type="submit" class="btn btn-primary btn-lg">Register</button>
+         </form>
+       </ion-content>
     </ion-pane>
   </body>
 </html>
