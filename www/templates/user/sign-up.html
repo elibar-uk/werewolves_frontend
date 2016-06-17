@@ -1,0 +1,26 @@
+<ion-view view-title="Sign Up">
+  <h1>Sign Up</h1>
+  <form ng-submit="ctrl.submitRegistration(registrationForm)" role="form" ng-init="registrationForm = {}">
+    <div class="form-group">
+
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input type="text" ng-model="registrationForm.email" required="required" class="form-control"/>
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password" ng-model="registrationForm.password" required="required" class="form-control"/>
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Confirm Password</span>
+        <input type="password" ng-model="registrationForm.password_confirmation" required="required" class="form-control"/>
+      </label>
+
+      <label class="item">
+        <button class="button button-block button-positive" type="submit">Sign Up</button>
+      </label>
+    </div>
+  </form>
+</ion-view>
