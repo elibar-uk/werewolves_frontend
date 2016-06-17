@@ -29,6 +29,7 @@
     <script src="js/app.js"></script>
     <script src="js/configuration.js"></script>
     <script src="js/controllers/UserController.js"></script>
+    <script src="js/controllers/WerewolvesController.js"></script>
   </head>
     <body ng-app="werewolvesTwo" ng-controller="UserController as userCtrl">
       <ion-pane>
@@ -38,7 +39,8 @@
         <a class='button button-positive button-large' ng-href="#sign_in">Sign in</a>
         <a class='button button-assertive button-large' ng-click='signOut()'>Sign out</a>
       </ion-header-bar>
-        <ion-content>
+      
+        <ion-content ng-controller = "WerewolvesController as wwctrl">
         <section ui-view></section>
       </ion-content>
     </ion-pane>

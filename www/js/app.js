@@ -25,9 +25,15 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth'])
       url: '/sign_in',
       templateUrl: 'views/user/sign_in.html'
     })
-    .state('werewolves', {
+    .state('home', {
       url: '/',
-      templateUrl: 'views/werewolves.html'
+      templateUrl: 'views/home.html'
+
+    })
+    .state('werewolves', {
+      url: '/werewolves',
+      templateUrl: 'views/werewolves.html',
+      controller: 'WerewolvesController'
     });
 
     $urlRouterProvider.otherwise('/');
