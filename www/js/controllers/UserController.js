@@ -21,10 +21,7 @@ angular.module('werewolvesTwo')
     $scope.handleSignOutBtnClick = function() {
     $auth.signOut()
       .then(function(resp) {
-        debugger
-        $state.go('/');
-        alert('goodbye');
-
+        $state.go('/sign_out');
       })
       .catch(function(resp) {
         // handle error response
@@ -57,10 +54,7 @@ angular.module('werewolvesTwo')
       $scope.user = user;
     });
 
-    $scope.$on('devise:logout', function (e, user){
-      $scope.user = {};
 
-    });
     // // this.user = $auth.validateUser().then(function(resp){
     //   return resp.uid
     // })
@@ -70,5 +64,6 @@ angular.module('werewolvesTwo')
     // });
     $rootScope.$on('auth:logout-success', function(ev) {
       alert('goodbye');
+      $location.path('/sign_out')
     });
   });

@@ -28,7 +28,10 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth'])
     .state('home', {
       url: '/',
       templateUrl: 'views/home.html'
-
+    })
+    .state('sign_out', {
+      url: '/sign_out',
+      templateUrl: 'views/sign_out.html'
     })
     .state('werewolves', {
       url: '/werewolves',
