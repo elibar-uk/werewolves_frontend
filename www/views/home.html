@@ -1,6 +1,8 @@
 
-<div ng-app="werewolvesTwo" ng-controller="UserController as userCtrl">
-{{user}}
-    </div>
-<h1>Welcome {{ user.nickname }} to werewolvesTwo the best selling game</h1>
-  <a class='button button-positive button-large' ng-href="#werewolves">PLAY!</a>
+<div ng-app="werewolvesTwo" ng-controller="UserController as userCtrl"></div>
+<h1>Welcome to WEREWOLVES - the best selling game!</h1>
+
+  <a class='button button-block button-large' ng-href="#werewolves" ng-show="user.signedIn == true">PLAY!</a>
+  <a class='button button-block button-large' ng-click='signOut()' ng-show="user.signedIn == true" >Sign out</a>
+  <a class='button button-block button-large' ng-href="#sign_up" ng-hide="user.signedIn == true"  >Sign up</a>
+  <a class='button button-block button-large' ng-href="#sign_in" ng-hide="user.signedIn == true">Sign in</a>
