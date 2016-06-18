@@ -33,7 +33,12 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth'])
     .state('werewolves', {
       url: '/werewolves',
       templateUrl: 'views/werewolves.html',
-      controller: 'WerewolvesController'
+      controller: 'WerewolvesController',
+      resolve: {
+         auth: function($auth) {
+           return $auth.validateUser();
+         }
+       }
     });
 
     $urlRouterProvider.otherwise('/');

@@ -23,13 +23,28 @@ angular.module('werewolvesTwo')
       .then(function(resp) {
         debugger
         $state.go('/');
+        alert('goodbye');
 
       })
       .catch(function(resp) {
         // handle error response
       });
     };
+    $scope.handlePwdResetBtnClick = function() {
+      $auth.requestPasswordReset($scope.pwdResetForm)
+        .then(function(resp) {
+          // handle success response
+        })
+        .catch(function(resp) {
+          // handle error response
+        });
+    };
+
+
+
+
     $rootScope.$on('auth:login-success', function(ev, user) {
+      $scope.user = user;
       alert('Welcome ', user.email);
       $location.path('/')
     });
@@ -46,9 +61,9 @@ angular.module('werewolvesTwo')
       $scope.user = {};
 
     });
-    $auth.validateUser().then(function(resp){
-      console.log(resp.uid)
-    })
+    // // this.user = $auth.validateUser().then(function(resp){
+    //   return resp.uid
+    // })
 
     // $rootScope.$on('auth:login-error', function(ev, reason) {
     //   alert('auth failed because', reason.errors[0]);
