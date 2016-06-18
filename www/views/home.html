@@ -1,8 +1,14 @@
+<ion-view view-title="Werewolves">
+  <ion-content>
 
-<div ng-app="werewolvesTwo" ng-controller="UserController as userCtrl"></div>
-<h1>Welcome to WEREWOLVES - the best selling game!</h1>
 
-  <a class='button button-block button-large' ng-href="#werewolves" ng-show="user.signedIn == true">PLAY!</a>
-  <a class='button button-block button-large' ng-click='signOut()' ng-show="user.signedIn == true" >Sign out</a>
-  <a class='button button-block button-large' ng-href="#sign_up" ng-hide="user.signedIn == true"  >Sign up</a>
-  <a class='button button-block button-large' ng-href="#sign_in" ng-hide="user.signedIn == true">Sign in</a>
+<!-- <div ng-app="werewolvesTwo" ng-controller="UserController as userCtrl"></div> -->
+    <h1>Welcome to WEREWOLVES - the best selling game!</h1>
+
+    <a class='button button-block button-large' ng-href="#app/werewolves" ng-show="user.signedIn == true">PLAY!</a>
+    <a class='button button-block button-large' ng-click='signOut()' ng-show="user.signedIn == true" >Sign out</a>
+    <a class='button button-block button-large' ng-href="#sign_up" ng-hide="user.signedIn == true"  >Sign up</a>
+    <a class='button button-block button-large' ng-href="#sign_in" ng-hide="user.signedIn == true">Sign in</a>
+
+  </ion-content>
+</ion-view>
