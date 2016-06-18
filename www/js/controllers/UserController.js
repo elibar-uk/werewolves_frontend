@@ -21,7 +21,6 @@ angular.module('werewolvesTwo')
     $scope.handleSignOutBtnClick = function() {
     $auth.signOut()
       .then(function(resp) {
-        debugger
         $state.go('/');
         alert('goodbye');
 

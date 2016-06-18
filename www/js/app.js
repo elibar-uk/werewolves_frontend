@@ -28,7 +28,6 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth'])
     .state('home', {
       url: '/',
       templateUrl: 'views/home.html'
-
     })
     .state('werewolves', {
       url: '/werewolves',
@@ -39,7 +38,16 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth'])
            return $auth.validateUser();
          }
        }
+    })
+    .state('rules', {
+      url: '/rules',
+      templateUrl: 'views/rules.html'
+    })
+    .state('names', {
+      url:'/names',
+      templateUrl: 'views/names.html'
     });
+
 
     $urlRouterProvider.otherwise('/');
 
