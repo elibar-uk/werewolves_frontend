@@ -46,6 +46,14 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth'])
     .state('names', {
       url:'/names',
       templateUrl: 'views/names.html'
+    })
+    .state('playerrole', {
+      url: '/playerrole',
+      templateUrl: 'views/playerrole.html'
+    })
+    .state('playervote', {
+      url: '/playervote',
+      templateUrl: 'views/playervote.html'
     });
 
 
