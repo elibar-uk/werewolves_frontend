@@ -30,6 +30,22 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth'])
         }
       }
     })
+    .state('app.instructions', {
+      url: '/instructions',
+      views: {
+        'menuContent': {
+          templateUrl: 'views/instructions.html'
+        }
+      }
+    })
+    .state('app.roles', {
+      url: '/roles',
+      views: {
+        'menuContent': {
+          templateUrl: 'views/roles.html'
+        }
+      }
+    })
     .state('app.werewolves', {
       url: '/werewolves',
       views: {
