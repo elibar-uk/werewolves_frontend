@@ -46,6 +46,78 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
         }
       }
     })
+    .state('app.villager', {
+     url: '/villager',
+     views: {
+       'menuContent': {
+         templateUrl: 'views/cards/villager.html'
+       }
+     }
+   })
+   .state('app.werewolf', {
+    url: '/werewolf',
+    views: {
+      'menuContent': {
+        templateUrl: 'views/cards/werewolf.html'
+      }
+    }
+  })
+    .state('app.seer', {
+     url: '/seer',
+     views: {
+       'menuContent': {
+         templateUrl: 'views/cards/seer.html'
+       }
+     }
+   })
+   .state('app.sheriff', {
+    url: '/sheriff',
+    views: {
+      'menuContent': {
+        templateUrl: 'views/cards/sheriff.html'
+      }
+    }
+  })
+  .state('app.witch', {
+   url: '/witch',
+   views: {
+     'menuContent': {
+       templateUrl: 'views/cards/witch.html'
+     }
+   }
+  })
+  .state('app.little-girl', {
+   url: '/little-girl',
+   views: {
+     'menuContent': {
+       templateUrl: 'views/cards/little-girl.html'
+     }
+   }
+  })
+  .state('app.white-werewolf', {
+   url: '/white-werewolf',
+   views: {
+     'menuContent': {
+       templateUrl: 'views/cards/white-werewolf.html'
+     }
+   }
+  })
+  .state('app.wild-child', {
+   url: '/wild-child',
+   views: {
+     'menuContent': {
+       templateUrl: 'views/cards/wild-child.html'
+     }
+   }
+  })
+  .state('app.cupid', {
+   url: '/cupid',
+   views: {
+     'menuContent': {
+       templateUrl: 'views/cards/cupid.html'
+     }
+   }
+  })
     .state('app.werewolves', {
       url: '/werewolves',
       views: {

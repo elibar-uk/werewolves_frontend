@@ -1,9 +1,14 @@
 <ion-view view-title="Werewolves">
   <ion-content>
+    
+<img src="./img/werewolves.png" alt="" />
+<!-- {{user.nickname}}
+{{user.email}}
+{{user.bio}}
+{{user.image}} -->
 
-    <h1>Welcome to WEREWOLVES {{ user.nickname }}- the best selling game!</h1>
-
-    <img src="./img/werewolves.png" alt="" />
+<!-- <div ng-app="werewolvesTwo" ng-controller="UserController as userCtrl"></div> -->
+    <h1>Welcome to WEREWOLVES - the best selling game!</h1>
 
     <a class='button button-block button-large' ng-href="#app/werewolves" ng-show="user.signedIn == true">PLAY!</a>
     <a class='button button-block button-large' ng-click='signOut()' ng-show="user.signedIn == true" >Sign out</a>
