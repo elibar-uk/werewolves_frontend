@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/elibar-uk/werewolves_frontend.png?label=ready&title=Ready)](https://waffle.io/elibar-uk/werewolves_frontend)
 Ionic App Base
 =====================
 
