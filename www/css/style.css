@@ -23,9 +23,15 @@
   border-radius: 100%;
 }
 
-.profile-email {
+.profile-name {
   padding-top: 20px;
   font-size: x-large !important;
   font-weight: bold !important;
   text-transform: capitalize;
+}
+.profile-bio {
+  padding-top: 20px;
+  font-size: x-small !important;
+  font-weight: bold !important;
+  /*text-transform: capitalize;*/
 }
