@@ -6,7 +6,7 @@
   <ion-content ng-show="user.signedIn == true">
     <div class="list card">
       <ion-item class="profile-item">
-        
+
           <div class="profile-picture big-profile-picture" ng-show="user.signedIn == true">
             <img src="{{user.image}}">
           </div>
@@ -15,15 +15,10 @@
 
           <article class="w3-container">
             Bio:
-            <div class="profile-bio">{{user.bio}}ljh;glsdfyguiopo[poiuytrscghvbnm]</div>
+            <div class="profile-bio">{{user.bio}}</div>
           </article>
         </ion-item>
-          <a class='button button-block button-large' ng-href="#app/werewolves" ng-show="user.signedIn == true">Play</a>
-          <button class="button button-block button-large" ng-click='signOut()'ng-show="user.signedIn == true">
-            Log out
-          </button>
-
-        </ion-item>
+        
       </div>
     </ion-content>
 </ion-view>
