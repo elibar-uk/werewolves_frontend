@@ -25,21 +25,5 @@
   <button id='register' type="submit" class="button button-block button-stable">Register</button>
 
 </form>
-<!--
-<div class="modal-body">
-  <form role="form" name="resourceForm" ng-submit="save()">
-    <div class="form-group">
-      <label>Title</label>
-      <input type="text" class="form-control" ng-required="true"
-            ng-model="myResource.title" placeholder="" />
-    </div>
-    <div class="form-group">I was
-      <label>Attachment</label>
-      <input type="file" ngf-select ng-model="myResource.file_attachment" />
-    </div>
-  </form>
-</div>
-<a file-download record="myResource">
-  {{myResource.file_attachment_file_name}}
-</a> -->
+
 <input id="file-input" type="file" ngf-select="upload($file)" ng-model="image" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB" ngf-min-height="100">
