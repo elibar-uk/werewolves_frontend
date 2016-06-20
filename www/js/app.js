@@ -131,6 +131,46 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
          }
        }
     })
+    .state('players', {
+      url: '/players',
+      templateUrl: 'views/game/players.html',
+      controller: 'WerewolvesController'
+    })
+    .state('revealRoleHidden', {
+      url: '/revealRoleHidden',
+      templateUrl: 'views/game/revealRoleHidden.html',
+      controller: 'WerewolvesController'
+    })
+    .state('revealRoleShow', {
+      url: '/revealRoleShow',
+      templateUrl: 'views/game/revealRoleShow.html',
+      controller: 'WerewolvesController'
+    })
+    .state('nightPlayHidden', {
+      url: '/nightPlayHidden',
+      templateUrl: 'views/game/nightPlayHidden.html',
+      controller: 'WerewolvesController'
+    })
+    .state('nightPlayShow', {
+      url: '/nightPlayShow',
+      templateUrl: 'views/game/nightPlayShow.html',
+      controller: 'WerewolvesController'
+    })
+    .state('dayPlay', {
+      url: '/dayPlay',
+      templateUrl: 'views/game/dayPlay.html',
+      controller: 'WerewolvesController'
+    })
+    .state('lynch', {
+      url: '/lynch',
+      templateUrl: 'views/game/lynch.html',
+      controller: 'WerewolvesController'
+    })
+    .state('gameOver', {
+      url: '/gameOver',
+      templateUrl: 'views/game/gameOver.html',
+      controller: 'WerewolvesController'
+    })
     .state('app.account', {
       url: '/account',
       views: {
@@ -145,6 +185,7 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
       templateUrl: 'views/home.html',
       controller: 'UserController'
     })
+
     .state('sign_up', {
       url: '/sign_up',
       templateUrl: 'views/user/sign_up.html',
