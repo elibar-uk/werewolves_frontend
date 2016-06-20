@@ -1,4 +1,4 @@
-angular.module('werewolvesTwo', ['ionic', 'ng-token-auth'])
+angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
 
 
 .run(function($ionicPlatform) {

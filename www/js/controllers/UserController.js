@@ -3,12 +3,14 @@ angular.module('werewolvesTwo')
   $scope.handleRegBtnClick = function() {
     $auth.submitRegistration($scope.registrationForm)
       .then(function(resp) {
-       $state.go('werewolves');
+      $location.path('/app')
+      //  $state.go('app');
       })
       .catch(function(resp) {
-        //error pages
+        console.log("failure")//error pages
       });
     };
+
     $scope.handleLoginBtnClick = function() {
       $auth.submitLogin($scope.loginForm)
         .then(function(resp) {
@@ -21,10 +23,7 @@ angular.module('werewolvesTwo')
     $scope.handleSignOutBtnClick = function() {
     $auth.signOut()
       .then(function(resp) {
-        debugger
-        $state.go('/');
-        alert('goodbye');
-
+        $state.go('/sign_out');
       })
       .catch(function(resp) {
         // handle error response
@@ -40,7 +39,28 @@ angular.module('werewolvesTwo')
         });
     };
 
-
+    // Upload Picture on file select or drop
+    // $scope.upload = function (file) {
+    //   Upload.upload({
+    //     url: 'avatars/' + avatar.id + '.json',
+    //     method: 'PUT',
+    //     headers: { 'Content-Type': false },
+    //     fields: {
+    //       'avatar[title]': avatar.title,
+    //       'avatar[body]': avatar.body,
+    //       'avater[image]': file
+    //     },
+    //     file: file,
+    //     sendFieldsAs: 'json'
+    //   }).then(function (resp) {
+    //     console.log('Success ' + resp.config.file.name + 'uploaded. Response: ' + resp.data);
+    //   }, function (resp) {
+    //     console.log('Error status: ' + resp.status);
+    //   }, function (evt) {
+    //     var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+    //     console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
+    //   });
+    // };
 
 
     $rootScope.$on('auth:login-success', function(ev, user) {
@@ -57,10 +77,7 @@ angular.module('werewolvesTwo')
       $scope.user = user;
     });
 
-    $scope.$on('devise:logout', function (e, user){
-      $scope.user = {};
 
-    });
     // // this.user = $auth.validateUser().then(function(resp){
     //   return resp.uid
     // })
@@ -70,5 +87,6 @@ angular.module('werewolvesTwo')
     // });
     $rootScope.$on('auth:logout-success', function(ev) {
       alert('goodbye');
+      $location.path('/sign_out');
     });
   });
