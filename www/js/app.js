@@ -118,18 +118,59 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
      }
    }
   })
-    .state('app.werewolves', {
-      url: '/werewolves',
-      views: {
-        'menuContent': {
-          templateUrl: 'views/werewolves.html',
-        }
-      },
-      resolve: {
-         auth: function($auth) {
-           return $auth.validateUser();
-         }
-       }
+  .state('app.werewolves', {
+    url: '/werewolves',
+    views: {
+      'menuContent': {
+        templateUrl: 'views/werewolves.html',
+      }
+    },
+  })
+      // resolve: {
+      //    auth: function($auth) {
+      //      return $auth.validateUser();
+      //    }
+      //  }
+
+    .state('players', {
+      url: '/players',
+      templateUrl: 'views/game/players.html',
+      controller: 'WerewolvesController'
+    })
+    .state('revealRoleHidden', {
+      url: '/revealRoleHidden',
+      templateUrl: 'views/game/revealRoleHidden.html',
+      controller: 'WerewolvesController'
+    })
+    .state('revealRoleShow', {
+      url: '/revealRoleShow',
+      templateUrl: 'views/game/revealRoleShow.html',
+      controller: 'WerewolvesController'
+    })
+    .state('nightPlayHidden', {
+      url: '/nightPlayHidden',
+      templateUrl: 'views/game/nightPlayHidden.html',
+      controller: 'WerewolvesController'
+    })
+    .state('nightPlayShow', {
+      url: '/nightPlayShow',
+      templateUrl: 'views/game/nightPlayShow.html',
+      controller: 'WerewolvesController'
+    })
+    .state('dayPlay', {
+      url: '/dayPlay',
+      templateUrl: 'views/game/dayPlay.html',
+      controller: 'WerewolvesController'
+    })
+    .state('lynch', {
+      url: '/lynch',
+      templateUrl: 'views/game/lynch.html',
+      controller: 'WerewolvesController'
+    })
+    .state('gameOver', {
+      url: '/gameOver',
+      templateUrl: 'views/game/gameOver.html',
+      controller: 'WerewolvesController'
     })
     .state('app.account', {
       url: '/account',
