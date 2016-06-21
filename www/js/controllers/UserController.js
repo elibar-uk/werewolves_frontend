@@ -1,5 +1,6 @@
 angular.module('werewolvesTwo')
 .controller('UserController', function($location, $rootScope, $scope, $auth, $state, $window){
+  
   $scope.handleRegBtnClick = function() {
     $auth.submitRegistration($scope.registrationForm)
       .then(function(resp) {
