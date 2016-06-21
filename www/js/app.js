@@ -118,19 +118,20 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
      }
    }
   })
-    .state('app.werewolves', {
-      url: '/werewolves',
-      views: {
-        'menuContent': {
-          templateUrl: 'views/werewolves.html',
-        }
-      },
-      resolve: {
-         auth: function($auth) {
-           return $auth.validateUser();
-         }
-       }
-    })
+  .state('app.werewolves', {
+    url: '/werewolves',
+    views: {
+      'menuContent': {
+        templateUrl: 'views/werewolves.html',
+      }
+    },
+  })
+      // resolve: {
+      //    auth: function($auth) {
+      //      return $auth.validateUser();
+      //    }
+      //  }
+
     .state('players', {
       url: '/players',
       templateUrl: 'views/game/players.html',
