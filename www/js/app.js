@@ -13,7 +13,6 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
   });
 })
 
-
 .config(function($authProvider, $stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('app', {
@@ -118,13 +117,38 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
      }
    }
   })
-  .state('app.werewolves', {
-    url: '/werewolves',
+  .state('app.home', {
+    url: '/home',
     views: {
       'menuContent': {
-        templateUrl: 'views/werewolves.html',
+       templateUrl: 'views/home.html',
+       controller: 'UserController'
+       }
+    },
+  })
+  .state('app.sign_up', {
+    url: '/sign_up',
+    views: {
+      'menuContent': {
+      templateUrl: 'views/user/sign_up.html',
+      // controller: 'UserController'
       }
     },
+  })
+  .state('app.sign_in', {
+    url: '/sign_in',
+    views: {
+      'menuContent': {
+      templateUrl: 'views/user/sign_in.html',
+      // controller: 'UserController'
+      }
+    },
+  })
+
+  .state('werewolves', {
+    url: '/werewolves',
+    templateUrl: 'views/werewolves.html',
+    controller: 'WerewolvesController'
   })
       // resolve: {
       //    auth: function($auth) {
@@ -180,24 +204,11 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
         }
       },
       controller: 'UserController'
-    })
-    .state('home', {
-      url: '/home',
-      templateUrl: 'views/home.html',
-      controller: 'UserController'
-    })
-    .state('sign_up', {
-      url: '/sign_up',
-      templateUrl: 'views/user/sign_up.html',
-      controller: 'UserController'
-    })
-    .state('sign_in', {
-      url: '/sign_in',
-      templateUrl: 'views/user/sign_in.html',
-      controller: 'UserController'
     });
 
-    $urlRouterProvider.otherwise('/home');
+
+
+    $urlRouterProvider.otherwise('/app/home');
 
     $authProvider.configure({
       apiUrl: 'http://localhost:3000'
