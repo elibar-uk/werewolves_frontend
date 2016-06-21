@@ -117,6 +117,50 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
      }
    }
   })
+  .state('app.big-bad-wolf', {
+   url: '/big-bad-wolf',
+   views: {
+     'menuContent': {
+       templateUrl: 'views/cards/big-bad-wolf.html'
+     }
+   }
+  })
+  .state('app.accursed-wolf', {
+   url: '/accursed-wolf',
+   views: {
+     'menuContent': {
+       templateUrl: 'views/cards/accursed-wolf.html'
+     }
+   }
+  })
+  .state('app.angel', {
+   url: '/angel',
+   views: {
+     'menuContent': {
+       templateUrl: 'views/cards/angel.html'
+     }
+   }
+  })
+  .state('app.defender', {
+   url: '/defender',
+   views: {
+     'menuContent': {
+       templateUrl: 'views/cards/defender.html'
+     }
+   }
+  })
+  .state('app.hunter', {
+   url: '/hunter',
+   views: {
+     'menuContent': {
+       templateUrl: 'views/cards/hunter.html'
+     }
+   }
+  })
+
+
+
+
   .state('app.home', {
     url: '/home',
     views: {
