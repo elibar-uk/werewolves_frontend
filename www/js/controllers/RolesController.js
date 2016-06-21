@@ -19,6 +19,16 @@ angular.module('werewolvesTwo', ['ionic'])
   text: '' },
     { image: 'assets/img/cupid.png',
   text: '' }
+    { image: 'assets/img/big-bad-wolf.png',
+  text: '' }
+  { image: 'assets/img/accursed-wolf.png',
+  text: '' }
+  { image: 'assets/img/angel.png',
+  text: '' }
+  { image: 'assets/img/defender.png',
+  text: '' }
+  { image: 'assets/img/hunter.png',
+  text: '' }
 
   ];
 
