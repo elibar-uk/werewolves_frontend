@@ -11,6 +11,8 @@ angular.module('werewolvesTwo')
       });
     };
 
+
+
     $scope.handleLoginBtnClick = function() {
       $auth.submitLogin($scope.loginForm)
         .then(function(resp) {
@@ -38,29 +40,6 @@ angular.module('werewolvesTwo')
           // handle error response
         });
     };
-
-    // Upload Picture on file select or drop
-    // $scope.upload = function (file) {
-    //   Upload.upload({
-    //     url: 'avatars/' + avatar.id + '.json',
-    //     method: 'PUT',
-    //     headers: { 'Content-Type': false },
-    //     fields: {
-    //       'avatar[title]': avatar.title,
-    //       'avatar[body]': avatar.body,
-    //       'avater[image]': file
-    //     },
-    //     file: file,
-    //     sendFieldsAs: 'json'
-    //   }).then(function (resp) {
-    //     console.log('Success ' + resp.config.file.name + 'uploaded. Response: ' + resp.data);
-    //   }, function (resp) {
-    //     console.log('Error status: ' + resp.status);
-    //   }, function (evt) {
-    //     var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-    //     console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
-    //   });
-    // };
 
 
     $rootScope.$on('auth:login-success', function(ev, user) {

@@ -1,4 +1,4 @@
-angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
+angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngCordova'])
 
 
 .run(function($ionicPlatform) {
@@ -66,6 +66,11 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
       url: '/sign_in',
       templateUrl: 'views/user/sign_in.html',
       controller: 'UserController'
+    })
+    .state('profile', {
+      url: '/profile',
+      templateUrl: 'views/profile.html',
+      controller: 'ImageController as ctrl'
     });
 
     $urlRouterProvider.otherwise('/home');
