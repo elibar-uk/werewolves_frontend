@@ -1,9 +1,10 @@
 angular.module('werewolvesTwo')
-.controller('UserController', function($location, $rootScope, $scope, $auth, $state){
+.controller('UserController', function($location, $rootScope, $scope, $auth, $state, $window){
   $scope.handleRegBtnClick = function() {
     $auth.submitRegistration($scope.registrationForm)
       .then(function(resp) {
       $location.path('/app');
+      $window.location.reload();
       //  $state.go('app');
       })
       .catch(function(resp) {

@@ -186,7 +186,6 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
       templateUrl: 'views/home.html',
       controller: 'UserController'
     })
-
     .state('sign_up', {
       url: '/sign_up',
       templateUrl: 'views/user/sign_up.html',
