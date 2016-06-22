@@ -1,35 +1,36 @@
 <ion-view view-title="Werewolves">
   <ion-content>
 
-<form ng-submit="handleRegBtnClick(registrationForm)" role="form" ng-init="registrationForm = {}">
+    <form ng-submit="handleRegBtnClick(registrationForm)" role="form" ng-init="registrationForm = {}">
 
-  <label class="item item-input">
-    <input id='email' type="email" name="email" ng-model="registrationForm.email" required="required" placeholder="email"/>
-  </label>
+      <label class="item item-input">
+        <input id='email' type="email" name="email" ng-model="registrationForm.email" required="required" placeholder="email"/>
+      </label>
 
-  <label class="item item-input">
-    <input id='password' type="password" name="password" ng-model="registrationForm.password" required="required" placeholder="password"/>
-  </label>
+      <label class="item item-input">
+        <input id='password' type="password" name="password" ng-model="registrationForm.password" required="required" placeholder="password"/>
+      </label>
 
-  <label class="item item-input">
-    <input id='password-conf' type="password" name="password_confirmation" ng-model="registrationForm.password_confirmation" required="required" placeholder="password confirmation"/>
-  </label>
+      <label class="item item-input">
+        <input id='password-conf' type="password" name="password_confirmation" ng-model="registrationForm.password_confirmation" required="required" placeholder="password confirmation"/>
+      </label>
 
-  <label class="item item-input">
-    <input id='nickname' type="text" name="nickname" ng-model="registrationForm.nickname" required="required" placeholder="usernname"/>
-  </label>
+      <label class="item item-input">
+        <input id='nickname' type="text" name="nickname" ng-model="registrationForm.nickname" required="required" placeholder="usernname"/>
+      </label>
 
-  <label class="item item-input">
-    <input id='bio' type="text" name="bio" ng-model="registrationForm.bio" required="required" placeholder="bio"/>
-  </label>
+      <label class="item item-input">
+        <input id='bio' type="text" name="bio" ng-model="registrationForm.bio" required="required" placeholder="bio"/>
+      </label>
 
-  <label class="item item-input">
-    <input id="file-input" type="file" ngf-select="upload($file)" ng-model="image" ngf-pattern="'image/*'"
-    accept="image/*" ngf-max-size="20MB" ngf-min-height="100">
-  </label>
+      <label class="item item-input">
+        <input id="file-input" type="file" ngf-select="upload($file)" ng-model="image" ngf-pattern="'image/*'"
+        accept="image/*" ngf-max-size="20MB" ngf-min-height="100">
+      </label>
 
-  <button type="submit" class="button button-block button-stable">Register</button>
+      <button type="submit" class="button button-block button-stable">Register</button>
 
-</form>
-</ion-view>
+    </form>
+
   </ion-content>
+</ion-view>
