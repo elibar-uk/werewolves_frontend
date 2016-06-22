@@ -7,7 +7,8 @@ angular.module('werewolvesTwo')
       //  $state.go('app');
       })
       .catch(function(resp) {
-        console.log("failure")//error pages
+        alert(resp)
+        console.log("failure", resp)//error pages
       });
     };
 

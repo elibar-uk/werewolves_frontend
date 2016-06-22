@@ -77,6 +77,7 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngCordova'])
 
     $authProvider.configure({
       apiUrl: 'http://localhost:3000'
+    //  apiUrl: 'https://werewolvestwo.herokuapp.com/'
   });
 
 });

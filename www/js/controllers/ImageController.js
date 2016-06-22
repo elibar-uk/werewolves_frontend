@@ -1,40 +1,28 @@
 angular.module('werewolvesTwo')
-.controller('ImageController', ['ImageService', '$scope', '$cordovaCamera', function( ImageService, $scope, $cordovaCamera ){
+.controller('ImageController',[ '$scope', '$cordovaCamera', 'ImageService',function( $scope, $cordovaCamera, ImageService ){
 
   $scope.pictureUrl = "http://placehold.it/300x300";
 
+  $scope.takePicture = function() {
+    var options = {
+      destinationType: Camera.DestinationType.DATA_URL,
+      encodingType: Camera.EncodingType.JPEG
+    }
+    $cordovaCamera.getPicture(options)
+    .then(function(data){
 
- //  var self = this;
- //  self.getImages = getImages;
- //
- // function getImages() {
- //   ImageService.getAll()
- //   .then(function(response){
- //     self.images = response;
- //   });
- // }
- //
- // function uploadImage() {
- //   ImageService.createImage(image);
- // }
- // $scope.upload = function (file) {
- //    Upload.upload({
- //        url: 'http://localhost:3000/users',
- //        method: 'POST',
- //        // fields: { 'avatar[user_id]': $scope.name },
- //        file: file,
- //        // fileFormDataName: 'image'
- //
- //    }).then(function (resp) {
- //
- //      console.log(resp)
- //        console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
- //
- //    }, function (resp) {
- //        console.log('Error status: ' + resp.status);
- //    }, function (evt) {
- //        var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
- //        console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
- //    });
- //  };
+      console.log('camera data: ' + angular.toJson(data));
+
+      var picture = "data:image/jpeg;base64," + data;
+
+      ImageService.createImage(picture);
+    });
+  };
+
+  $scope.takePicturetest = function() {
+      ImageService.createImage (picture);
+  }
+
+
+
 }]);

@@ -1,18 +1,15 @@
 <ion-view title="Account Settings">
-    <ion-content class="padding">
+  <ion-content class="padding">
+    <div class="list card">
 
+      <div class="item item-image">
+          <!-- <img ng-src="{{ pictureUrl}}"> -->
+        </div>
+      </div>
 
+      <div class="padding">
+    <button ng-click="takePicturetest()" class="button button-block button-calm">take picture</button>
+    {{profile.image.url}}
 
-
-
-          <div class="list card">
-            <div class="item">
-              <img ng src="{{pictureURL}}" />
-
-            </div>
-          </div>
-
-
-
-    </ion-content>
+  </ion-content>
 </ion-view>
