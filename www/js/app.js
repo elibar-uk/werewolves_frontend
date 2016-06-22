@@ -247,7 +247,7 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
       controller: 'WerewolvesController'
     });
 
-    $urlRouterProvider.otherwise('/app/roles');
+    $urlRouterProvider.otherwise('/app/home');
 
     $authProvider.configure({
       apiUrl: 'http://localhost:3000'
