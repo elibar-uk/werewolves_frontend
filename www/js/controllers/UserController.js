@@ -1,6 +1,6 @@
 angular.module('werewolvesTwo')
 .controller('UserController', function($location, $rootScope, $scope, $auth, $state, $window){
-  
+
   $scope.handleRegBtnClick = function() {
     $auth.submitRegistration($scope.registrationForm)
       .then(function(resp) {
@@ -12,7 +12,6 @@ angular.module('werewolvesTwo')
         //error pages
       });
     };
-
     $scope.handleLoginBtnClick = function() {
       $auth.submitLogin($scope.loginForm)
         .then(function(resp) {
