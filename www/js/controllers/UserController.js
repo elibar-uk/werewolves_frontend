@@ -1,14 +1,14 @@
 angular.module('werewolvesTwo')
-.controller('UserController', function($location, $rootScope, $scope, $auth, $state){
+.controller('UserController', function($location, $rootScope, $scope, $auth, $state, $window){
   $scope.handleRegBtnClick = function() {
     $auth.submitRegistration($scope.registrationForm)
       .then(function(resp) {
-      $location.path('/app')
+      $location.path('/app');
+      $window.location.reload();
       //  $state.go('app');
       })
       .catch(function(resp) {
 
-        console.log("workign", resp.statusText)//error pages
       });
     };
 
@@ -45,8 +45,8 @@ angular.module('werewolvesTwo')
 
     $rootScope.$on('auth:login-success', function(ev, user) {
       $scope.user = user;
-      alert('Welcome ', user.email);
-      $location.path('/')
+      // alert('Welcome ', user.email);
+      $location.path('/');
     });
 
     $scope.$on('devise:new-registration', function (e, user){
@@ -66,7 +66,7 @@ angular.module('werewolvesTwo')
     //   alert('auth failed because', reason.errors[0]);
     // });
     $rootScope.$on('auth:logout-success', function(ev) {
-      alert('goodbye');
+      // alert('goodbye');
       $location.path('/sign_out');
     });
   });

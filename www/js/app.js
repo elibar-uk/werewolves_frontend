@@ -250,6 +250,7 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth'])
     $urlRouterProvider.otherwise('/app/home');
 
     $authProvider.configure({
-      apiUrl: 'http://localhost:3000'
+      // apiUrl: 'http://localhost:3000'
+      apiUrl: 'https://werewolvestwo.herokuapp.com/'
   });
 });
