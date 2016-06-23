@@ -1,16 +1,15 @@
-
-<ion-view  view-title="Your Account" >
-  <ion-content ng-show="user.signedIn == true">
-    <ion-item class="center-item">
-      <div class="profile-picture big-profile-picture" ng-show="user.signedIn == true">
-        <img src="{{ user.image }}">
-      </div>
-      <h2 class="profile-name dark" ng-show="user.signedIn == true">{{ user.nickname }}</h2>
-      <p> {{ user.points }} 100 points</p>
-    </ion-item>
-    <ion-item class="center-item">
-      <h3>About</h3>
-      <div class="profile-bio">{{ user.bio }}</div>
-    </ion-item>
-  </ion-content>
+<ion-view  view-title="Your Account">
+ <ion-content>
+   <ion-item class="center-item">
+     <div class="profile-picture big-profile-picture">
+       <img src="assets/img/profile.png">
+     </div>
+     <h2 class="profile-name dark" >{{ user.nickname }}</h2>
+     <p> {{ user.points }} 100 points</p>
+   </ion-item>
+   <ion-item class="center-item">
+     <h3>About</h3>
+     <div class="profile-bio">{{ user.bio }}</div>
+   </ion-item>
+ </ion-content>
 </ion-view>

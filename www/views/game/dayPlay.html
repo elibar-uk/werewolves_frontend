@@ -1,8 +1,14 @@
 <div ng-controller="WerewolvesController" ng-init="addLivingPlayers()">
-  Someone must hang for this travesty!
-  <select name="dayVote">
-    <option ng-repeat="player in info.livingPlayers track by $index" value="{{player}}">{{player.name}}</option>
-  </select>
+  <div class="night-show">
+    <h1>Someone must hang for this travesty!</h1>
+  </di
+  v>
+    <div class="item item-select">
+      <select name="dayVote">
+        <option ng-repeat="player in info.livingPlayers track by $index" value="{{player}}">{{player.name}}</option>
+      </select>
+
+</div>
 <a class='button button-block button-large' ng-click="refreshWindow()" ng-href="#lynch">Pass</a>
 <a class='button button-block button-large' ng-href="#home">Exit Game</a>
 </div>

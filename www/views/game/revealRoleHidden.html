@@ -1,8 +1,10 @@
-Hidden Role
 
-<div ng-controller="WerewolvesController">
-  {{getPlayerList()[getCurTurnIndex()].name}}<br>
+
+<div class="player-reveal" ng-controller="WerewolvesController">
+<h1>{{getPlayerList()[getCurTurnIndex()].name}}</h1>
+<p>
   Click Show role to reveal your role
+</p>
 </div>
 
 <a class='button button-block button-large' ng-href="#revealRoleShow">Show Role</a>

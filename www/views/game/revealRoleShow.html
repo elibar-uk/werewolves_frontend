@@ -1,6 +1,9 @@
 Show Role
-<div ng-controller="WerewolvesController">
-  You are a {{getPlayerList()[getCurTurnIndex()].role.desc}}
+<div  ng-controller="WerewolvesController">
+  <div class="player-show">
+
+    <h1><font color="grey">You are a {{getPlayerList()[getCurTurnIndex()].role.desc}}</font></h1>
+  </div>
   <a class='button button-block button-large' ng-click="resetTurnIndex()" ng-href="#nightPlayHidden" ng-if="lastTurnReveal()">Last Pass</a>
   <a class='button button-block button-large' ng-click="incrementCurTurnIndex()" ng-href="#revealRoleHidden" ng-if="inTurnReveal()">Pass</a>
   <a class='button button-block button-large' ng-href="#home">Exit Game</a>

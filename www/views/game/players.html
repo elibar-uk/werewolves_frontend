@@ -1,16 +1,23 @@
 Enter player names
 
 <div ng-controller="WerewolvesController">
-  {{getMode().desc}}
 
   <form name="playerNameForm">
     <div class="playerNameLoop" ng-repeat="i in getPlayers() track by $index">
-      <label>Player {{i}}</label>
-      <input type="text" name="player{{i}}name" ng-model="names[($index)]" value="Add name">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Player {{i}}</span>
+        <input type="text" name="player{{i}}name" ng-model="names[($index)]" value="Add name">
+
+
+
+
+
+
+      </label>
     </div>
   </form>
 
-  {{names}}
+
 
   <a class='button button-block button-large' ng-click="savePlayers(names)" ng-href="#revealRoleHidden">Confirm</a>
   <a class='button button-block button-large' ng-href="#home">Exit Game</a>

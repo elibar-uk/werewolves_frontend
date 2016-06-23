@@ -1,24 +1,33 @@
 Night vote form
 <div ng-controller="WerewolvesController" ng-init="addLivingPlayers()">
-  You are a {{info.livingPlayers[getCurTurnIndex()].role.desc}}
-  <br>
-  <div ng-if="info.livingPlayers[getCurTurnIndex()].role.desc == 'Werewolf'">
-    {{info.livingPlayers[getCurTurnIndex()].role.nightResponsibility}}
-    <br>
+<div class="night-show">
+
+  <h1><font color="grey"> You are a {{info.livingPlayers[getCurTurnIndex()].role.desc}}</font></h1>
+</div>
+
+  <div class="night-show" ng-if="info.livingPlayers[getCurTurnIndex()].role.desc == 'Werewolf'">
+    <h4><font color="white">{{info.livingPlayers[getCurTurnIndex()].role.nightResponsibility}}</font></h4>
+
+
+
+
     <label name="nightWerewolfVote" ng-repeat="player in info.livingPlayers track by $index">
-      {{player.name}}
-      <input type="radio" ng-model="wwVote.vote" ng-value="{{player}}" name="vote"><br>
-    </label>
-    {{wwVote.vote.name}}
+      <ion-radio type="radio" ng-model="wwVote.vote" ng-value="{{player}}" name="vote">
+        {{player.name}}
+  </ion-radio>
+  </label>
   </div>
-  <div ng-if="info.livingPlayers[getCurTurnIndex()].role.desc == 'Villager'">
-    {{info.livingPlayers[getCurTurnIndex()].role.nightResponsibility}}
-    <br>
+  <div  ng-if="info.livingPlayers[getCurTurnIndex()].role.desc == 'Villager'">
+    <div class="night-show">
+
+  <h4><font color="white">  {{info.livingPlayers[getCurTurnIndex()].role.nightResponsibility}}</font></h4>
+
     <label name="nightvillagerVote" ng-repeat="player in info.livingPlayers track by $index">
-      {{player.name}}
-      <input type="radio" ng-model="vVote.vote" ng-value="{{player}}" name="vote"><br>
-    </label>
-    {{vVote.vote.name}}
+      <ion-radio type="radio" ng-model="vVote.vote" ng-value="{{player}}" name="vote">
+        {{player.name}}
+  </ion-radio>
+  </label>
+</div>
   </div>
   <a class='button button-block button-large' ng-click="resetTurnIndex(); addVote(wwVote.vote); killVoted()" ng-href="#kill" ng-if="lastTurn() && info.livingPlayers[getCurTurnIndex()].role.desc == 'Werewolf'">Pass</a>
   <a class='button button-block button-large' ng-click="resetTurnIndex(); killVoted()" ng-href="#kill" ng-if="lastTurn() && info.livingPlayers[getCurTurnIndex()].role.desc == 'Villager'">Pass</a>

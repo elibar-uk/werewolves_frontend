@@ -5,7 +5,7 @@ angular.module('werewolvesTwo')
   };
 
   $scope.addVote = function(vote) {
-    debugger
+    
     if(vote!=null) {
       var stringVote = JSON.stringify(vote);
       sessionStorage.setItem("currentVote", stringVote);
@@ -27,16 +27,16 @@ angular.module('werewolvesTwo')
       nameArray.push(playerArray[i].name);
     };
     var index = nameArray.indexOf($scope.getVote().name);
-    debugger
+
     playerArray[index].isDead = true;
 
-    debugger
+
     var stringPlayers = JSON.stringify(playerArray);
     sessionStorage.setItem("players", stringPlayers);
-    debugger
+
     var playerString = JSON.stringify(playerArray[index]);
     sessionStorage.setItem("justDied", playerString)
-    debugger
+
   }
 
   $scope.getJustKilled = function() {
@@ -53,7 +53,7 @@ angular.module('werewolvesTwo')
 
   $scope.gameIsOver = function () {
     return (($scope.getLivingWolves().length === 0) || ($scope.getLivingNonWolves().length === $scope.getLivingWolves().length))
-    debugger
+
   }
 
   $scope.gameIsRunning = function() {
@@ -114,7 +114,7 @@ angular.module('werewolvesTwo')
 
   $scope.addLivingPlayers = function() {
     $scope.info.livingPlayers = $scope.getLivingPlayers();
-    debugger
+
   }
 
   $scope.info = {
@@ -252,7 +252,7 @@ angular.module('werewolvesTwo')
   };
 
   $scope.gameModes = [
-    {name: "test 4 Players",
+    {name: "4 Players",
         desc: "A simple 4-player game with a Werewolf and 3 Villagers.",
         players: 4,
         roles: [

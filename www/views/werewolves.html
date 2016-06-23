@@ -1,15 +1,16 @@
 <ion-view view-title="Werewolves">
   <ion-content>
-    Game modes
+    <h3>GAME MODES</h3>
 
     <div ng-controller="WerewolvesController">
       <form name="myForm" ng-repeat="mode in gameModes">
         <label>
-          <input type="radio" ng-model="game.mode" ng-value="{{mode.index}}">
+          <ion-radio type="radio" ng-model="game.mode" ng-value="{{mode.index}}">
           {{mode.name}}
-        </label><br/>
+          </ion-radio>
+        </label>
        </form>
-       <tt> mode = {{gameModes[game.mode].desc}}</tt><br/>
+       <h4> {{gameModes[game.mode].desc}}</h4>
 
       <a class='button button-block button-large' ng-click="submitMode(game.mode)" ng-href="#players">Start Game</a>
       <a class='button button-block button-large' ng-href="#home">Exit Game</a>

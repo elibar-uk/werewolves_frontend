@@ -36,7 +36,7 @@
   /*text-transform: capitalize;*/
 }
 .generic-text {
-  padding-top: 20px;
+  padding: 20px;
   font-size: small !important;
   font-weight: bold !important;
   /*text-transform: capitalize;*/
@@ -45,9 +45,98 @@ h3 {
   padding-top: 20px;
   font-size: x-large !important;
   font-weight: bold !important;
+  color: white;
+  text-align: center;
+}
+h4{
+  padding-top: 20px;
+
+
+  color: white;
+  text-align: center;
+
+
+}
+h1{
+
+color: white;
+  text-transform: uppercase;
+  text-align: center;
+
+
+}
+.item-select select {
+   -moz-appearance: none;
+   position: absolute;
+   top: 0px;
+   bottom: 0px;
+   right: 0px;
+   padding: 0px 45px 0px 0px;
+   max-width: 100%;
+   border: medium none;
+   background: #FFF none repeat scroll 0% 0%;
+   color: #333;
+   text-indent: 0.01px;
+   text-overflow: "";
+   white-space: nowrap;
+   font-size: 14px;
+   cursor: pointer;
+   direction: rtl;
+}
+.input-label {
+    display: table;
+    padding: 7px 10px 7px 0px;
+    max-width: 200px;
+    width: 35%;
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+    width: 96%;
+    border-color: none;
+
+
 }
 
+.player-reveal, .player-show, .night-show {
+
+    margin:50px
+}
+
+.item-stacked-label {
+
+    border: none;
+}
+
+.item-input {
+
+    width: 96%;
+  }
+
+h5{
+  color: gray;
+}
+
+
+p{
+  text-align: center;
+  color: grey;
+}
 .ion-content {
   background-color: green;
   margin-left: 20px;
+}
+.pane {
+  background-color: #2d2d2d;
+  border: 20px;
+}
+
+.button.button-block {
+  width: 90%;
+  margin: 20px AUTO;
+  text-transform: uppercase;
+}
+
+body {
+  color: white;
+  border: 20px;
 }
