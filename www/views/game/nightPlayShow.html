@@ -1,5 +1,28 @@
 Night vote form
-
-<a class='button button-block button-large' ng-href="#lynch" ng-show="true">Pass</a>
-<a class='button button-block button-large' ng-click="" ng-href="#nightPlayHidden" ng-show="true">Pass</a>
-<a class='button button-block button-large' ng-href="#home">Exit Game</a>
+<div ng-controller="WerewolvesController" ng-init="addLivingPlayers()">
+  You are a {{info.livingPlayers[getCurTurnIndex()].role.desc}}
+  <br>
+  <div ng-if="info.livingPlayers[getCurTurnIndex()].role.desc == 'Werewolf'">
+    {{info.livingPlayers[getCurTurnIndex()].role.nightResponsibility}}
+    <br>
+    <label name="nightWerewolfVote" ng-repeat="player in info.livingPlayers track by $index">
+      {{player.name}}
+      <input type="radio" ng-model="wwVote.vote" ng-value="{{player}}" name="vote"><br>
+    </label>
+    {{wwVote.vote.name}}
+  </div>
+  <div ng-if="info.livingPlayers[getCurTurnIndex()].role.desc == 'Villager'">
+    {{info.livingPlayers[getCurTurnIndex()].role.nightResponsibility}}
+    <br>
+    <label name="nightvillagerVote" ng-repeat="player in info.livingPlayers track by $index">
+      {{player.name}}
+      <input type="radio" ng-model="vVote.vote" ng-value="{{player}}" name="vote"><br>
+    </label>
+    {{vVote.vote.name}}
+  </div>
+  <a class='button button-block button-large' ng-click="resetTurnIndex(); addVote(wwVote.vote); killVoted()" ng-href="#kill" ng-if="lastTurn() && info.livingPlayers[getCurTurnIndex()].role.desc == 'Werewolf'">Pass</a>
+  <a class='button button-block button-large' ng-click="resetTurnIndex(); killVoted()" ng-href="#kill" ng-if="lastTurn() && info.livingPlayers[getCurTurnIndex()].role.desc == 'Villager'">Pass</a>
+  <a class='button button-block button-large' ng-click="incrementCurTurnIndex(); addVote(wwVote.vote)" ng-href="#nightPlayHidden" ng-if="inTurn() && info.livingPlayers[getCurTurnIndex()].role.desc == 'Werewolf'">WWPass</a>
+  <a class='button button-block button-large' ng-click="incrementCurTurnIndex()" ng-href="#nightPlayHidden" ng-if="inTurn() && info.livingPlayers[getCurTurnIndex()].role.desc == 'Villager'">VPass</a>
+  <a class='button button-block button-large' ng-href="#home">Exit Game</a>
+</div>

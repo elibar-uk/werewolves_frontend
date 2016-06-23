@@ -1,0 +1,6 @@
+<div ng-controller="WerewolvesController">
+  SOMEONE HAS BEEN MAULED BY THE WOLVES!!!
+  {{getJustKilled().name}} who was a {{getJustKilled().role.desc}}
+  <a class='button button-block button-large' ng-href="#gameOver" ng-if="gameIsOver()">To day</a>
+  <a class='button button-block button-large' ng-href="#dayPlay" ng-if="gameIsRunning()">Pass</a>
+</div>

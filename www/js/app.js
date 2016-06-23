@@ -167,6 +167,11 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
       templateUrl: 'views/game/lynch.html',
       controller: 'WerewolvesController'
     })
+    .state('kill', {
+      url: '/kill',
+      templateUrl: 'views/game/kill.html',
+      controller: 'WerewolvesController'
+    })
     .state('gameOver', {
       url: '/gameOver',
       templateUrl: 'views/game/gameOver.html',
@@ -198,7 +203,7 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth','ngFileUpload'])
       controller: 'UserController'
     });
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('home');
 
     $authProvider.configure({
       apiUrl: 'http://localhost:3000'

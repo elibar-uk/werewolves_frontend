@@ -1,6 +1,10 @@
-Reveal victim
+<body>
+  <div ng-controller="WerewolvesController" ng-init="addLivingPlayers()">
+    You have chosen to hang:
+    SOMEONES NAME HERE who was a SOMEONES ROLE HERE
 
-<a class='button button-block button-large' ng-href="#dayPlay" ng-show="true">To day</a>
-<a class='button button-block button-large' ng-href="#nightPlayHidden" ng-show="true">To night</a>
-<a class='button button-block button-large' ng-href="#gameOver" ng-show="true">gameOver</a>
-<a class='button button-block button-large' ng-href="#home">Exit Game</a>
+    <a class='button button-block button-large' ng-href="#gameOver" ng-if="gameIsOver()">To day</a>
+    <a class='button button-block button-large' ng-click="refreshWindow()" ng-href="#nightPlayHidden" ng-if="gameIsRunning()">To night</a>
+    <a class='button button-block button-large' ng-href="#home">Exit Game</a>
+  </div>
+</body>
