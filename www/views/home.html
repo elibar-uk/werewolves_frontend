@@ -1,14 +1,21 @@
 <ion-view view-title="Werewolves">
   <ion-content>
+    <div class="center-item">
+      <h3 >The Werewolves of Miller's Hollow</h3>
+      <div class="generic-text dark">
 
-    <h1>Welcome to WEREWOLVES - the best selling game!</h1>
+        In the wild East, the small hamlet of Miller's Hollow has recently
+        become the target of Werewolves. The villagers must gather their wits
+        to eradicate this new plague returning from past aeons, before the
+        hamlet loses it's last inhabitants...
 
-    <img src="./img/werewolves.png" alt="" />
+    </div>
+      <img src="./img/werewolves.png" alt="" />
+    </div>
 
-    <a class='button button-block button-large' ng-href="#app/werewolves" ng-show="user.signedIn == true">PLAY!</a>
-    <a class='button button-block button-large' ng-click='signOut()' ng-show="user.signedIn == true">Sign out</a>
-    <a class='button button-block button-large' ng-href="#sign_up" ng-show="!user.signedIn == true">Sign up</a>
-    <a class='button button-block button-large' ng-href="#sign_in" ng-show="!user.signedIn == true">Sign in</a>
+    <a class='button button-block button-large' ng-href="#werewolves" ng-show="user.signedIn == true">PLAY!</a>
+    <a class='button button-block button-large' ng-href="#app/sign_up" ng-show="!user.signedIn == true">Register</a>
+    <a class='button button-block button-large' ng-href="#app/sign_in" ng-show="!user.signedIn == true">Login</a>
 
   </ion-content>
 </ion-view>

@@ -1,20 +1,23 @@
 angular.module('werewolvesTwo')
-.controller('UserController', function($location, $rootScope, $scope, $auth, $state){
+.controller('UserController', function($location, $rootScope, $scope, $auth, $state, $window){
   $scope.handleRegBtnClick = function() {
     $auth.submitRegistration($scope.registrationForm)
       .then(function(resp) {
       $location.path('/app');
+      $window.location.reload();
       //  $state.go('app');
       })
       .catch(function(resp) {
-        //error pages
+
       });
     };
+
+
 
     $scope.handleLoginBtnClick = function() {
       $auth.submitLogin($scope.loginForm)
         .then(function(resp) {
-           $state.go('/app');
+           $state.go('/');
         })
         .catch(function(resp) {
           // handle error response
@@ -39,32 +42,10 @@ angular.module('werewolvesTwo')
         });
     };
 
-    // Upload Picture on file select or drop
-    // $scope.upload = function (file) {
-    //   Upload.upload({
-    //     url: 'avatars/' + avatar.id + '.json',
-    //     method: 'PUT',
-    //     headers: { 'Content-Type': false },
-    //     fields: {
-    //       'avatar[title]': avatar.title,
-    //       'avatar[body]': avatar.body,
-    //       'avater[image]': file
-    //     },
-    //     file: file,
-    //     sendFieldsAs: 'json'
-    //   }).then(function (resp) {
-    //     console.log('Success ' + resp.config.file.name + 'uploaded. Response: ' + resp.data);
-    //   }, function (resp) {
-    //     console.log('Error status: ' + resp.status);
-    //   }, function (evt) {
-    //     var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-    //     console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
-    //   });
-    // };
-
 
     $rootScope.$on('auth:login-success', function(ev, user) {
       $scope.user = user;
+      // alert('Welcome ', user.email);
       $location.path('/');
     });
 
@@ -85,6 +66,7 @@ angular.module('werewolvesTwo')
     //   alert('auth failed because', reason.errors[0]);
     // });
     $rootScope.$on('auth:logout-success', function(ev) {
+      // alert('goodbye');
       $location.path('/sign_out');
     });
   });

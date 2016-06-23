@@ -1,7 +1,7 @@
 /* Empty. Add your own CSS if you like */
 
 
-.profile-item {
+.center-item {
   text-align: center;
 }
 
@@ -34,4 +34,20 @@
   font-size: x-small !important;
   font-weight: bold !important;
   /*text-transform: capitalize;*/
+}
+.generic-text {
+  padding-top: 20px;
+  font-size: small !important;
+  font-weight: bold !important;
+  /*text-transform: capitalize;*/
+}
+h3 {
+  padding-top: 20px;
+  font-size: x-large !important;
+  font-weight: bold !important;
+}
+
+.ion-content {
+  background-color: green;
+  margin-left: 20px;
 }

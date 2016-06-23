@@ -1,5 +1,7 @@
+<ion-view view-title="Werewolves">
+  <ion-content>
 
-<form ng-submit="handleRegBtnClick(registrationForm)" role="form" ng-init="registrationForm = {}">
+    <form ng-submit="handleRegBtnClick(registrationForm)" role="form" ng-init="registrationForm = {}">
 
   <label class="item item-input">
     <input id='email' type="email" name="email" ng-model="registrationForm.email" required="required" placeholder="email"/>
@@ -21,9 +23,9 @@
   </label>
 
 
-
-  <button type="submit" class="button button-block button-stable">Register</button>
+  <button id='register' type="submit" class="button button-block button-stable">Register</button>
 
 </form>
 
-<input id="file-input" type="file" ngf-select="upload($file)" ng-model="image" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB" ngf-min-height="100">
+  </ion-content>
+</ion-view>
