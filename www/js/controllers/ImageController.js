@@ -20,6 +20,7 @@ angular.module('werewolvesTwo')
   };
 
   $scope.takePicturetest = function() {
+      var picture = "hello world"
       ImageService.createImage (picture);
   }
 

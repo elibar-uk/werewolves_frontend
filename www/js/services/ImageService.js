@@ -14,6 +14,6 @@ angular.module('werewolvesTwo')
     self.createImage = function(imageData) {
       console.log("working")
       console.log(imageData)
-      return $http.post(imageUrl, { image: imageData });
+      return $http.post(imageUrl, { image: imageData } );
     };
   }]);
