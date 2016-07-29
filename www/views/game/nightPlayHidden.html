@@ -1,4 +1,9 @@
-Night Play Hidden
+<div class="night-show" ng-controller="WerewolvesController" ng-init="addLivingPlayers()">
+  <h1>{{info.livingPlayers[getCurTurnIndex()].name}}</h1>
+<p>
 
+  It's night time click to vote
+</p>
+</div>
 <a class='button button-block button-large' ng-href="#nightPlayShow">Click to vote</a>
 <a class='button button-block button-large' ng-href="#home">Exit Game</a>

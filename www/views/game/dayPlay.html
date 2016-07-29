@@ -1,5 +1,14 @@
-Daytime
+<div ng-controller="WerewolvesController" ng-init="addLivingPlayers()">
+  <div class="night-show">
+    <h1>Someone must hang for this travesty!</h1>
+  </di
+  v>
+    <div class="item item-select">
+      <select name="dayVote">
+        <option ng-repeat="player in info.livingPlayers track by $index" value="{{player}}">{{player.name}}</option>
+      </select>
 
-<a class='button button-block button-large' ng-href="#lynch" ng-show="true">Pass</a>
-<a class='button button-block button-large' ng-click="" ng-href="#dayPlay" ng-show="true">Pass</a>
+</div>
+<a class='button button-block button-large' ng-click="refreshWindow()" ng-href="#lynch">Pass</a>
 <a class='button button-block button-large' ng-href="#home">Exit Game</a>
+</div>

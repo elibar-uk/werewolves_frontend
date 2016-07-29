@@ -241,15 +241,20 @@ angular.module('werewolvesTwo', ['ionic', 'ng-token-auth'])
       templateUrl: 'views/game/lynch.html',
       controller: 'WerewolvesController'
     })
+    .state('kill', {
+      url: '/kill',
+      templateUrl: 'views/game/kill.html',
+      controller: 'WerewolvesController'
+    })
     .state('gameOver', {
       url: '/gameOver',
       templateUrl: 'views/game/gameOver.html',
       controller: 'WerewolvesController'
     });
-
     $urlRouterProvider.otherwise('/app/home');
 
     $authProvider.configure({
-      apiUrl: 'http://localhost:3000'
+      // apiUrl: 'http://localhost:3000'
+      apiUrl: 'https://werewolvestwo.herokuapp.com/'
   });
 });

@@ -1,4 +1,11 @@
-Hidden Role
+
+
+<div class="player-reveal" ng-controller="WerewolvesController">
+<h1>{{getPlayerList()[getCurTurnIndex()].name}}</h1>
+<p>
+  Click Show role to reveal your role
+</p>
+</div>
 
 <a class='button button-block button-large' ng-href="#revealRoleShow">Show Role</a>
 <a class='button button-block button-large' ng-href="#home">Exit Game</a>

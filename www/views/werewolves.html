@@ -1,9 +1,20 @@
 <ion-view view-title="Werewolves">
   <ion-content>
-    Game modes
+    <h3>GAME MODES</h3>
 
-    <a class='button button-block button-large' ng-href="#players">Start Game</a>
-    <a class='button button-block button-large' ng-href="#home">Exit Game</a>
+    <div ng-controller="WerewolvesController">
+      <form name="myForm" ng-repeat="mode in gameModes">
+        <label>
+          <ion-radio type="radio" ng-model="game.mode" ng-value="{{mode.index}}">
+          {{mode.name}}
+          </ion-radio>
+        </label>
+       </form>
+       <h4> {{gameModes[game.mode].desc}}</h4>
 
+      <a class='button button-block button-large' ng-click="submitMode(game.mode)" ng-href="#players">Start Game</a>
+      <a class='button button-block button-large' ng-href="#home">Exit Game</a>
+      {{curMode}}
+    </div>
   </ion-content>
 </ion-view>
