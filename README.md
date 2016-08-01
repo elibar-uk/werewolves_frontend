@@ -1,26 +1,58 @@
 [![Stories in Ready](https://badge.waffle.io/elibar-uk/werewolves_frontend.png?label=ready&title=Ready)](https://waffle.io/elibar-uk/werewolves_frontend)
-Ionic App Base
-=====================
+WEREWOLVES GAME APP
+-----------
+![view 1](www/img/screenshot1.png?raw=true)
 
-A starting project for Ionic that optionally supports using custom SCSS.
+![view 2](www/img/screenshot2.png?raw=true)
 
-## Using this project
+![view 3](www/img/screenshot3.png?raw=true)
 
-We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
+![view 4](www/img/screenshot4.png?raw=true)
 
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
+![view 5](www/img/screenshot5.png?raw=true)
 
-```bash
-$ npm install -g ionic
+![view 6](www/img/screenshot6.png?raw=true)
+
+User Stories
+------------
+```
+As a fan of the werewolves game
+So I can play the game
+I want to be able to play it at anytime regardless of having the cards with me
+SOLUTION: mobile game app
+
+As a fan of the werewolves game
+So I can play the game
+I want to be able to sign-up to use the game app
+
+As a fan of the werewolves game
+So I can play the game
+I want to be able to login to see my profile and play the game
+SOLUTION: profile section with the player’s details, photo, bio, score
+OPPORTUNITY to extend: interactive chat between the players; forum
+
+As a fan of the werewolves game
+So that I don’t waste time explaining the rules to the newbies
+I want to the app provide quick access to the rules
+SOLUTION: rules section on the app
+
+As a newbie to the werewolves game
+So that I can avoid reviling my game identity by accident
+I want to be able to look up the meaning of my card
+SOLUTION: identities section on the app accessible at any point of the game
+
+As group of werewolves game fans
+So that we can all play
+We want to have the game to be narrator free
+SOLUTION: passing phone around for turns, votes  
+OPPORTUNITY to extend: multiplayers game
+
 ```
 
-Then run: 
-
-```bash
-$ ionic start myProject tabs
-```
-
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
-
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+Installation
+-------
+- Clone this repo
+- Ensure you have node.js, bower and ionic installed.
+- `npm install`
+- `bower install`
+- To run the app in your browser - `ionic serve`
